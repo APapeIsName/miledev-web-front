@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "마일데브 웹",
+  title: "마일데브 - 보기 쉬운 개발 정보",
   description: "마일데브 웹",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "마일데브 웹",
+    title: "마일데브 - 보기 쉬운 개발 정보",
     description: "마일데브 웹",
     url: "https://miledev.net",
   },
