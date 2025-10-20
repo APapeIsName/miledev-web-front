@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/ui/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,11 +33,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <header className="text-2xl font-bold">MILE for Developers</header>
       <body
-        className={"max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"}
+        className="bg-white font-sans"
       >
-        {children}
+        <Header />
+        <main className={"max-w-screen-xl mx-auto px-12 sm:px-6 lg:px-24"}>
+          {children}
+        </main>
       </body>
     </html>
   );
