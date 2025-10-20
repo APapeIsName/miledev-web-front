@@ -32,6 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <header className="text-2xl font-bold">MILE for Developers</header>
       <body
         className={"max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"}
       >
