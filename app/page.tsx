@@ -1,7 +1,7 @@
 'use client';
 
-import Article from "./(components)/article";
-import type { Post } from "./(components)/article";
+import Article from "./(components)/Article";
+import type { Post } from "./(components)/Article";
 
 export default function ListPage() {
   const posts: Post[] = [

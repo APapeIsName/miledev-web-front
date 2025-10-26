@@ -1,0 +1,65 @@
+/* Article.css */
+
+/* article 전체 컨테이너 */
+.article-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem; /* 16px */
+    border-radius: 0.5rem; /* 8px */
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .article-container:hover {
+    background-color: #f9fafb; /* gray-50 */
+  }
+  
+  /* 썸네일 이미지를 감싸는 div */
+  .article-thumbnail-wrapper {
+    flex-shrink: 0; /* 컨테이너가 줄어들어도 이미지 크기 유지 */
+    margin-right: 1.5rem; /* 24px */
+  }
+  
+  /* 썸네일 이미지 자체 */
+  .article-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* 이미지 비율 유지하며 채우기 */
+    border-radius: 0.375rem; /* 6px */
+  }
+  
+  /* 제목과 메타 정보를 감싸는 div */
+  .article-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* 게시물 제목 */
+  .article-title {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600; /* semibold */
+    color: #1f2937; /* gray-800 */
+    margin-bottom: 0.5rem; /* 8px */
+  }
+  
+  /* 메타 정보 (출처, 날짜, 조회수) 컨테이너 */
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* 각 아이템 사이 간격 16px */
+    font-size: 0.875rem; /* 14px */
+    color: #6b7280; /* gray-500 */
+  }
+  
+  /* 각 메타 정보 아이템 (아이콘 + 텍스트) */
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; /* 아이콘과 텍스트 사이 간격 4px */
+  }
+  
+  /* 아이콘 SVG 스타일 */
+  .icon {
+    width: 1rem; /* 16px */
+    height: 1rem; /* 16px */
+  }

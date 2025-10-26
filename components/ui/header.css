@@ -1,0 +1,34 @@
+/* header.css */
+
+/* <header> 태그: 전체 너비를 차지하고 하단에 경계선을 추가합니다. */
+header {
+    width: 100%;
+    border-bottom: 1px solid #e5e7eb; /* 연한 회색 경계선 */
+    background-color: #ffffff;
+  }
+  
+  /* 헤더 내부의 메인 div: 콘텐츠의 최대 너비를 제한하고 중앙에 정렬합니다. */
+  .header-container {
+    /* 페이지의 다른 콘텐츠와 너비를 맞추기 위해 max-width를 사용합니다. */
+    max-width: 1100px; 
+    /* 좌우 마진을 auto로 설정하여 중앙 정렬합니다. */
+    margin-left: auto;
+    margin-right: auto;
+    /* 내부 여백을 추가합니다. */
+    padding: 1.5rem 2rem; /* 상하 24px, 좌우 32px */
+  }
+  
+  /* 로고와 네비게이션을 감싸는 div: 요소들을 가로로 배치합니다. */
+  .header-content {
+    display: flex;
+    justify-content: space-between; /* 로고와 네비게이션을 양 끝으로 보냅니다. */
+    align-items: center; /* 수직 중앙 정렬 */
+  }
+  
+  /* 로고/사이트 제목 링크 스타일 */
+  .header-content a {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 700; /* bold */
+    color: #1f2937;   /* 진한 회색 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+  }

@@ -1,84 +1,83 @@
 import * as React from "react"
+import { clsx } from "clsx" // className을 쉽게 합치기 위한 유틸리티
+import "./card.css";
 
-import { cn } from "@/lib/utils"
+// 'as' prop을 위한 타입 정의
+type ElementProps<T extends React.ElementType> = {
+  as?: T
+} & React.ComponentPropsWithoutRef<T>
 
-function Card({ className, ...props }: React.ComponentProps<"div">) {
+function Card<T extends React.ElementType = "div">({
+  as,
+  className,
+  ...props
+}: ElementProps<T>) {
+  const Component = as || "div"
   return (
-    <div
+    <Component
       data-slot="card"
-      className={cn(
-        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
-        className
-      )}
+      className={clsx("card-base", className)} // 기본 클래스와 추가 클래스 병합
       {...props}
     />
   )
 }
 
-function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
+function CardHeader<T extends React.ElementType = "div">({
+  as,
+  className,
+  ...props
+}: ElementProps<T>) {
+  const Component = as || "div"
   return (
-    <div
-      data-slot="card-header"
-      className={cn(
-        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-2 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6",
-        className
-      )}
-      {...props}
-    />
+    <Component data-slot="card-header" className={className} {...props} />
   )
 }
 
-function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
+function CardTitle<T extends React.ElementType = "h3">({ // 제목이므로 h3를 기본값으로 변경
+  as,
+  className,
+  ...props
+}: ElementProps<T>) {
+  const Component = as || "h3"
+  return <Component data-slot="card-title" className={className} {...props} />
+}
+
+function CardDescription<T extends React.ElementType = "div">({
+  as,
+  className,
+  ...props
+}: ElementProps<T>) {
+  const Component = as || "div"
   return (
-    <div
-      data-slot="card-title"
-      className={cn("leading-none font-semibold", className)}
-      {...props}
-    />
+    <Component data-slot="card-description" className={className} {...props} />
   )
 }
 
-function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-description"
-      className={cn("text-muted-foreground text-sm", className)}
-      {...props}
-    />
-  )
+function CardAction<T extends React.ElementType = "div">({
+  as,
+  className,
+  ...props
+}: ElementProps<T>) {
+  const Component = as || "div"
+  return <Component data-slot="card-action" className={className} {...props} />
 }
 
-function CardAction({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-action"
-      className={cn(
-        "col-start-2 row-span-2 row-start-1 self-start justify-self-end",
-        className
-      )}
-      {...props}
-    />
-  )
+function CardContent<T extends React.ElementType = "div">({
+  as,
+  className,
+  ...props
+}: ElementProps<T>) {
+  const Component = as || "div"
+  return <Component data-slot="card-content" className={className} {...props} />
 }
 
-function CardContent({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-content"
-      className={cn("px-6", className)}
-      {...props}
-    />
-  )
-}
-
-function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-footer"
-      className={cn("flex items-center px-6 [.border-t]:pt-6", className)}
-      {...props}
-    />
-  )
+function CardFooter<T extends React.ElementType = "div">({
+  as,
+  className,
+  ...props
+}: ElementProps<T>) {
+  const Component = as || "div"
+  return <Component data-slot="card-footer" className={className} {...props} />
 }
 
 export {
