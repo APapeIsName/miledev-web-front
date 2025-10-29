@@ -8,7 +8,7 @@ export default function Header() {
         <div className="header-container">
           <div className="header-content">
             {/* 로고/사이트 제목 */}
-            <Link href="/">
+            <Link href="/" className="header-title">
               MILE for Developers
             </Link>
             
