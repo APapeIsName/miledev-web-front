@@ -34,14 +34,15 @@
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
+    line-height: 1.5 * 1.4;
+    font-weight: 500;
   }
   
   /* 게시물 제목 */
   .article-title {
-    font-size: 1.125rem; /* 18px */
-    font-weight: 600; /* semibold */
-    color: #1f2937; /* gray-800 */
-    margin-bottom: 0.5rem; /* 8px */
+    font-size: 1.5rem;
+    font-weight: 500; 
+    color: #1E0E62;
   }
   
   /* 메타 정보 (출처, 날짜, 조회수) 컨테이너 */
