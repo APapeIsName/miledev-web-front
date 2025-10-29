@@ -2,6 +2,7 @@
 
 import Article from "./(components)/Article";
 import type { Post } from "./(components)/Article";
+import "./page.css";
 
 export default function ListPage() {
   const posts: Post[] = [
@@ -40,7 +41,7 @@ export default function ListPage() {
   ];
 
   return (
-    <div className="p-4 md:p-8">
+    <div className="articles-list-container">
       {posts.map((post) => (
         <Article key={post.id} post={post} />
       )) as React.ReactNode}
