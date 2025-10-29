@@ -39,7 +39,7 @@ export default function Article({ post }: { post: Post }) {
 
       {/* 게시물 정보 (제목, 출처, 날짜, 조회수) */}
       <div className="article-info">
-        <h2 className="article-title">{post.title}</h2>
+        <div className="article-title">{post.title}</div>
 
         <div className="article-meta">
           <div className="meta-item">

@@ -23,11 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body
-        className="bg-white font-sans"
-      >
+      <body>
         <Header />
-        <main className={"max-w-screen-xl mx-auto px-12 sm:px-6 lg:px-24"}>
+        <main>
           {children}
         </main>
       </body>
