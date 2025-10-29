@@ -1,5 +1,9 @@
 import * as React from "react";
 import "./Article.css"; // CSS 파일을 import 합니다.
+import Image from "next/image";
+import tossIcon from "@/assets/icons/techblog-toss-icon.svg";
+import timeIcon from "@/assets/icons/time-icon.svg";
+import viewIcon from "@/assets/icons/view-icon.svg";
 
 // 데이터 타입을 정의합니다.
 export type Post = {
@@ -43,15 +47,15 @@ export default function Article({ post }: { post: Post }) {
 
         <div className="article-meta">
           <div className="meta-item">
-            <Icon path="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+            <Image src={tossIcon} alt="toss-icon" width={16} height={16} />
             <span>{post.source}</span>
           </div>
           <div className="meta-item">
-            <Icon path="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" />
+            <Image src={timeIcon} alt="time-icon" width={16} height={16} />
             <span>{post.date}</span>
           </div>
           <div className="meta-item">
-            <Icon path="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM10 12a2 2 0 100-4 2 2 0 000 4z" />
+            <Image src={viewIcon} alt="view-icon" width={16} height={16} />
             <span>{post.views}</span>
           </div>
         </div>

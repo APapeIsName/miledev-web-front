@@ -59,9 +59,8 @@
     align-items: center;
     gap: 0.25rem; /* 아이콘과 텍스트 사이 간격 4px */
   }
-  
-  /* 아이콘 SVG 스타일 */
-  .icon {
+
+  .meta-item img {
     width: 1rem; /* 16px */
     height: 1rem; /* 16px */
   }
