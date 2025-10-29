@@ -27,8 +27,9 @@ header {
   
   /* 로고/사이트 제목 링크 스타일 */
   .header-content a {
-    font-size: 1.25rem; /* 20px */
-    font-weight: 700; /* bold */
-    color: #1f2937;   /* 진한 회색 */
+    font-size: 1.75rem; /* 28px */
+    font-weight: 800; /* bold */
+    color: #3A4252;   /* 진한 회색 */
+    line-height: 1.5 * 1.4;
     text-decoration: none; /* 링크 밑줄 제거 */
   }
